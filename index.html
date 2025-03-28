@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 5 API</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; padding: 2rem; background: #f0f0f0;}
+        h1 { color: #2c3e50;}
+        h2 { color: #34495e;}
+        .endpoint {background: #fff; padding: 1rem; margin: 1rem 0; border-left: 5px solid #3498db;}
+        code {display: block; background: #ecf0f1; padding: 0.5rem; margin: 0.5rem 0;}
+    </style>
+</head>
+<body>
+    <h1> Group 5 API Documentation </h1>
+    <h2> User Management Service</h2>
+    <div class="endpoint">
+        <strong>User Registration</strong>
+        <code>POST /api/auth/register</code>
+        <p>Register a new user</p>
+    </div>
+    <div class="endpoint">
+        <strong>User Authentication</strong>
+        <code>POST /api/auth/login</code>
+        <p>Authentes a user and returns a JWT token.</p>
+    </div>
+    <h2>Resource Catalog Service</h2>
+    <div class="endpoint">
+        <strong>Retrieve Extension List</strong>
+        <code>GET /api/extensions </code>
+        <p>Returns a list of available extensions with filtering options.</p>
+    </div>
+    <div class="endpoint">
+      <strong>Retrieve Extension details</strong>  
+      <code>GET /api/extensions/{id}</code>
+      <p>Returns details of a specific extension.</p>
+    </div>
+    <div class="endpoint">
+        <strong>Add New Extension</strong>
+        <code>POST /api/extensions</code>
+        <p>Allows Authenticated users to add a new extension.</p>
+    </div>
+    <div class="endpoint">
+        <strong>Update Extension information</strong>
+        <code>PUT /api/extensions/{id}</code>
+        <p>Updates extension details, including archiving.</p>
+    </div>
+    <div class="endpoint">
+        <strong>Delete an Extension.</strong>
+        <code>DELETE /api/extensions/{id}</code>
+        <p>Removes an extension from the catalog.</p>
+    </div>
+
+    <h2>File upload Service</h2>
+    <div class="endpoint">
+        <strong>Upload an Extension File.</strong>
+        <code>POST /api/file/upload</code>
+        <p>Uploada an extension file to the server</p>
+    </div>
+    <div class="endpoint">
+        <strong>Download an Extension File.</strong>
+        <code>GET /api/file/download/{id}</code>
+        <p>Downloads an extension file and tracks download count.</p>
+    </div>
+</body>
+</html>
